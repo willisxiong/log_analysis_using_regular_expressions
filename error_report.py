@@ -71,7 +71,10 @@ class ErrorReport:
         else:
             print("Please generate the csv file first")
 
+def main():
+    report = ErrorReport("syslog.log")
+    report.create_report()
+    report.create_html()
 
-report = ErrorReport("syslog.log")
-report.create_report()
-report.create_html()
+if __name__ == "__main__":
+    main()

@@ -62,6 +62,10 @@ class UserReport:
         else:
             print("Please generate the csv file first")
 
-report = UserReport("syslog.log")
-report.create_report()
-report.create_html()
+def main():
+    report = UserReport("syslog.log")
+    report.create_report()
+    report.create_html()
+
+if __name__ == "__main__":
+    main()
